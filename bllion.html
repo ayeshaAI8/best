@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 50 Billionaires - Discover Legendary Figures</title>
+  <meta name="description" content="Explore the biographies of the top 50 billionaires in history. Learn about their lives, achievements, and journeys to success." />
+  <meta name="keywords" content="billionaires, biographies, Elon Musk, Jeff Bezos, Bill Gates, Warren Buffett, Mark Zuckerberg, richest people, Oprah Winfrey, Rihanna" />
+  <meta name="author" content="Your Brand Name" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fa;
+      color: #333;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      background: linear-gradient(to right, #0f2027, #2c5364);
+      color: white;
+      padding: 3rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    .ads {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .biography-tool {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .biography-tool input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .bio-content {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f0f0f0;
+      border-radius: 10px;
+    }
+    .bio-content img {
+      max-width: 200px;
+      float: left;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+    .btn {
+      background: #2c5364;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #0f2027;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      color: #555;
+    }
+    @media (max-width: 768px) {
+      .bio-content img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top 50 Legendary Billionaires</h1>
+    <p>Explore the life stories of the world's most iconic billionaires</p>
+  </header>
+
+  <div class="ads">
+    <!-- Google AdSense Ad Slot -->
+    <ins class="adsbygoogle"
+         style="display:block"ca-app-pub-6297798938697090/6719149103
+         data-ad-client-ca-app-pub-6297798938697090/6719149103
+         data-ad-slot="ca-app-pub-6297798938697090/4092985768
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="biography-tool">
+    <label for="legendSearch"><strong>Search for a Billionaire:</strong></label>
+    <input type="text" id="legendSearch" placeholder="Type to search..." />
+
+    <label for="legendSelect"><strong>Select a Billionaire:</strong></label>
+    <select id="legendSelect">
+      <option value="">-- Select --</option>
+    </select>
+
+    <div class="bio-content" id="bioContent">
+      <p>Select a billionaire from the list above to view their detailed biography.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Your Brand Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const bioContent = document.getElementById('bioContent');
+    const legendSelect = document.getElementById('legendSelect');
+    const legendSearch = document.getElementById('legendSearch');
+
+    const top50 = [
+      { id: "elon", name: "Elon Musk", image: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society_%28crop1%29.jpg", text: "Elon Musk, born in 1971 in South Africa, is a tech entrepreneur and founder of SpaceX, Tesla, Neuralink, and The Boring Company. Musk has disrupted multiple industries, from electric cars to space travel. His most ambitious goal is to make humanity a multi-planetary species, with Mars as the target. Musk's wealth, now over $200 billion, comes from Tesla’s soaring stock and SpaceX’s innovation. Known for his bold ideas, Musk is often seen as a visionary and a risk-taker." },
+      { id: "francoise", name: "Francoise Bettencourt Meyers", image: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Francoise_Bettencourt_Meyers.jpg", text: "Francoise Bettencourt Meyers, the richest woman in the world, inherited her wealth from her mother, Liliane Bettencourt, the L’Oréal heiress. A renowned philanthropist and author, Bettencourt Meyers supports science, arts, and social causes. Under her leadership, L'Oréal continues to innovate in the beauty industry. In addition to her business ventures, she has worked in scientific research and the arts, making significant contributions to global charity efforts." },
+      { id: "bezos", name: "Jeff Bezos", image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Jeff_Bezos%27s_iconic_photo.jpg", text: "Jeff Bezos, the founder of Amazon, revolutionized e-commerce, making it one of the world's largest companies. Starting from his garage in 1994, Bezos grew Amazon into a global retail and tech empire. He stepped down as CEO in 2021 to focus on his space company, Blue Origin. Bezos’s wealth, largely derived from Amazon’s stock, made him the wealthiest person for several years. He is also a major philanthropist, funding initiatives in space exploration and climate change." },
+      { id: "oprah", name: "Oprah Winfrey", image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Oprah_in_2014.jpg", text: "Oprah Winfrey is an iconic figure in media, philanthropy, and culture. Known for her influential talk show, 'The Oprah Winfrey Show,' Oprah's net worth exceeds $2.5 billion. She transformed media with her message of empowerment, spiritual wellness, and personal growth. Oprah is a trailblazer for women in media and an advocate for global causes, including education and poverty alleviation. Beyond television, she owns a multimedia empire and is recognized for her philanthropic efforts." },
+      { id: "warren", name: "Warren Buffett", image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Warren_Buffett_2011.jpg", text: "Warren Buffett, often called the 'Oracle of Omaha,' is the chairman and CEO of Berkshire Hathaway, one of the largest and most successful investment firms in the world. Known for his value investing strategy, Buffett has amassed a fortune through astute investments in companies such as Coca-Cola, American Express, and Geico. With a net worth of over $100 billion, he is a philanthropist, pledging much of his wealth to charitable causes, particularly through the Gates Foundation." },
+      { id: "bill", name: "Bill Gates", image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bill_Gates_2018.jpg", text: "Bill Gates co-founded Microsoft in 1975, which grew to become the world's leading software company. As the largest shareholder and CEO of Microsoft, Gates became one of the richest men in the world. In 2008, Gates transitioned to focus on philanthropy through the Bill & Melinda Gates Foundation, which has donated billions to health, education, and poverty alleviation worldwide. His wealth has been channeled into numerous charitable initiatives, aiming to improve global health and development." },
+      { id: "mark", name: "Mark Zuckerberg", image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Mark_Zuckerberg_2019.jpg", text: "Mark Zuckerberg, the co-founder of Facebook, revolutionized social media, connecting billions of people worldwide. He launched Facebook in 2004 from his Harvard dorm, and today, it’s one of the most influential companies globally. His fortune is primarily derived from Facebook’s stock, with Zuckerberg continuously expanding into new areas such as virtual reality through Oculus. As a philanthropist, he and his wife, Priscilla Chan, have pledged to donate 99% of their wealth during their lifetimes." }
+      // Add more billionaires here
+    ];
+
+    // Add Billionaire Names to Dropdown
+    top50.forEach(billionaire => {
+      const option = document.createElement('option');
+      option.value = billionaire.id;
+      option.textContent = billionaire.name;
+      legendSelect.appendChild(option);
+    });
+
+    // Search Functionality
+    legendSearch.addEventListener('input', function() {
+      const searchQuery = this.value.toLowerCase();
+      const filtered = top50.filter(billionaire => billionaire.name.toLowerCase().includes(searchQuery));
+      legendSelect.innerHTML = "<option value=''>-- Select --</option>";  // Reset options
+      filtered.forEach(billionaire => {
+        const option = document.createElement('option');
+        option.value = billionaire.id;
+        option.textContent = billionaire.name;
+        legendSelect.appendChild(option);
+      });
+    });
+
+    // Display Biography
+    legendSelect.addEventListener('change', function() {
+      const selected = this.value;
+      const bio = top50.find(b => b.id === selected);
+      if (bio) {
+        bioContent.innerHTML = `<img src="${bio.image}" alt="${bio.name}"><p><strong>${bio.name}:</strong> ${bio.text}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
